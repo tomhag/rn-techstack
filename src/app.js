@@ -19,12 +19,13 @@ const App = () => {
 // 3. Then the APP component is rendere to the screen, which in turn render the LibraryList-component. When the LL-component is rendered the CONNECT helper boots up calls mapStatetoProps, and reach back to the PROVIDER () and pulls out its STATE. Connect (mapStateToProps) then return the received values as a PROP to the LibraryList.
 
 		<Provider store={createStore(reducers)}>
-			<View>
+			<View style={{ flex: 1 }}>
 				<Header headerText="Tech Stack" />
 				<LibraryList />
 			</View>
 		</Provider>
 	);
 };
+
 
 export default App;
